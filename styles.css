@@ -486,6 +486,91 @@ body {
 .form-submit { width:100%; justify-content:center; }
 .form-success { display:flex; align-items:center; gap:.5rem; margin-top:1rem; padding:.875rem; background:rgba(16,185,129,.1); border:1px solid rgba(16,185,129,.3); border-radius:8px; color:var(--green); font-size:.85rem; font-weight:500; }
 
+/* ---- EXPERIENCE EXTRAS ---- */
+.tl-tag-pt {
+  font-family:'JetBrains Mono',monospace; font-size:.65rem;
+  color: var(--accent2); background: var(--accent-g);
+  border: 1px solid rgba(59,130,246,.3);
+  padding: 2px 8px; border-radius: 4px;
+}
+.tl-tag-intern {
+  font-family:'JetBrains Mono',monospace; font-size:.65rem;
+  color: #a78bfa; background: rgba(167,139,250,.1);
+  border: 1px solid rgba(167,139,250,.3);
+  padding: 2px 8px; border-radius: 4px;
+}
+.exp-card-alt { border-color: rgba(59,130,246,.25); background: linear-gradient(135deg, var(--surface), rgba(59,130,246,.04)); }
+.exp-tag-edu { font-size:.75rem; color: var(--text3); margin-left:.4rem; }
+
+/* ---- CERTIFICATIONS ---- */
+.cert-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1.25rem; margin-bottom:2rem; }
+
+.cert-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-l); padding: 1.5rem;
+  transition: var(--tr); position: relative; overflow: hidden;
+}
+.cert-card::before {
+  content: ''; position:absolute; top:0; left:0; right:0; height:3px;
+  background: linear-gradient(90deg, var(--accent), #818cf8);
+  transform: scaleX(0); transform-origin: left; transition: transform var(--tr);
+}
+.cert-card:hover { border-color: var(--border2); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.35); }
+.cert-card:hover::before { transform: scaleX(1); }
+
+.cert-top { display:flex; align-items:center; gap:.875rem; margin-bottom:1.1rem; }
+.cert-badge {
+  width:48px; height:48px; border-radius:10px; flex-shrink:0;
+  background: var(--accent-g); border: 1px solid rgba(59,130,246,.3);
+  display:flex; align-items:center; justify-content:center;
+  color: var(--accent);
+}
+.cert-badge-lld {
+  background: rgba(167,139,250,.1);
+  border-color: rgba(167,139,250,.3);
+  color: #a78bfa;
+}
+.cert-badge-db {
+  background: rgba(16,185,129,.1);
+  border-color: rgba(16,185,129,.3);
+  color: var(--green);
+}
+.cert-issuer { display:flex; flex-direction:column; gap:.2rem; }
+.cert-org { font-weight:700; font-size:.9rem; color: var(--text); }
+.cert-type { font-family:'JetBrains Mono',monospace; font-size:.62rem; color: var(--text3); text-transform:uppercase; letter-spacing:.08em; }
+
+.cert-title { font-size:1rem; font-weight:700; color:var(--text); margin-bottom:.5rem; }
+.cert-desc { font-size:.83rem; color:var(--text2); line-height:1.7; margin-bottom:1.1rem; }
+
+.cert-footer { border-top: 1px solid var(--border); padding-top:.875rem; }
+.cert-skills { display:flex; flex-wrap:wrap; gap:.35rem; }
+.cert-skills span {
+  font-family:'JetBrains Mono',monospace; font-size:.65rem;
+  padding:3px 8px; border-radius:4px;
+  background: var(--bg3); color:var(--text3); border:1px solid var(--border);
+}
+
+/* Scaler banner */
+.scaler-banner {
+  display:flex; align-items:center; justify-content:space-between;
+  background: linear-gradient(135deg, var(--surface), rgba(59,130,246,.06));
+  border: 1px solid rgba(59,130,246,.25);
+  border-radius: var(--radius-l); padding: 1.25rem 1.5rem;
+  gap:1rem; flex-wrap:wrap;
+}
+.sb-left { display:flex; align-items:center; gap:.875rem; }
+.sb-logo { font-size:1.75rem; }
+.sb-name { display:block; font-weight:700; font-size:.95rem; color:var(--text); }
+.sb-desc { font-family:'JetBrains Mono',monospace; font-size:.7rem; color:var(--text3); }
+.sb-link {
+  font-family:'JetBrains Mono',monospace; font-size:.75rem;
+  color:var(--accent); text-decoration:none;
+  padding:8px 16px; border-radius:7px;
+  border:1px solid rgba(59,130,246,.35);
+  transition:var(--tr); white-space:nowrap;
+}
+.sb-link:hover { background:var(--accent-g); }
+
 /* ---- FOOTER ---- */
 .footer { background:var(--bg); border-top:1px solid var(--border); padding:2rem 0; }
 .footer-in { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
